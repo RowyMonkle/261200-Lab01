@@ -5,10 +5,11 @@ public class forloop {
         Turtle Danny = new Turtle();
         Danny.speed(0);
         Danny.setPosition(0,0);
-
-        for (int j = 0; j < 36; j++) {
+//Start with The eyes - iris & pupil
+        //Draw eye.
+        for (int j = 0; j < 36; j++) { //Loop to rotate and draw 36 flower-like as iris
             double length = 5;
-            for (int i = 0; i < 60; i++) {
+            for (int i = 0; i < 60; i++) { // Create a spiral curve pattern
                 int colorIndex = (i / 15) % 4;
 
                 if (colorIndex == 0) {
@@ -29,24 +30,25 @@ public class forloop {
             Danny.forward(10);
             Danny.backward(10);
 
-            Danny.right(10);
+            Danny.right(10); // Rotate whole shape by 10 degrees for next petal
         }
-
+//black Pupils
         for (int i = 0; i < 72; i++) {
             Turtle Mickey = new Turtle();
             Mickey.speed(0);
             Mickey.up();
-            Mickey.setPosition(-322, 185);
+            Mickey.setPosition(-322, 185); //at the center of the eye
             Mickey.down();
 
             for (int j = 0; j < i * 5; j++) {
-                Mickey.left(1); // จำลองการหมุน angle
+                Mickey.left(1); // Rotate Mickey per step
             }
 
             Mickey.forward(425);
         }
 
-        Danny.speed(0); // เร็วสุด
+        //create eyelid
+        Danny.speed(0);
         Danny.width(5);
         double xCenter = -322;
         double yCenter = 185;
